@@ -1,0 +1,28 @@
+<ion-view view-title="{{vm.title}}">
+  <ion-content>
+    <!-- declarar tarjeta -->
+    <div class="list card">
+      <!-- cabecera tarjeta -->
+      <ion-item>
+        <h1>{{vm.info.capital}}</h1>
+        <h2>{{vm.info.region}} - {{vm.info.subregion}}</h2>
+      </ion-item>
+      <!-- cuerpo tarjeta -->
+      <ion-item class="item-body">
+        <ul>
+          <li><b>Population:</b> {{vm.info.population}}</li>
+          <li><b>Calling codes:</b>
+            <lu>
+              <li ng-repeat="code in vm.info.callingCodes">
+                {{code}}
+              </li>
+            </lu>
+          </li>
+        </ul>
+        <p>
+          <a href="#" class="subdued">Ver en el mapa</a>
+        </p>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>

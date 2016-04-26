@@ -1,0 +1,12 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "angular-translate": "~2.11.0",
+    "angular-translate-loader-static-files": "~2.11.0",
+    "angular-local-storage": "^0.2.7"
+  }
+}

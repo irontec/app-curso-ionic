@@ -1,0 +1,11 @@
+<ion-popover-view>
+  <ion-content>
+    <ion-list>
+      <!-- lista de posibles filtros -->
+      <ion-radio ng-model="vm.filterBy" ng-value="'name'">Por nombre</ion-radio>
+      <ion-radio ng-model="vm.filterBy" ng-value="'subregion'">Por subregion</ion-radio>
+      <ion-radio ng-model="vm.filterBy" ng-value="'capital'">Por capital</ion-radio>
+      <ion-radio ng-model="vm.filterBy" ng-value="'$'">Sin filtro</ion-radio>
+    </ion-list>
+  </ion-content>
+</ion-popover-view>

@@ -1,0 +1,37 @@
+<ion-view view-title="{{'SETTINGS.TITLE' | translate}}">
+  <ion-content>
+    <div class="list">
+
+      <!-- Select para seleccionar el idioma de la app -->
+      <label class="item item-input item-select">
+        <div class="input-label">
+          {{'SETTINGS.LANGUAGE' | translate}}
+        </div>
+        <!-- El select está enlazado con la variable vm.language y cada vez cambie de valor, llamará a la función vm.changeLanguage() -->
+        <select ng-model="vm.language" ng-change="vm.changeLanguage()">
+          <option value="es">ES</option>
+          <option value="eu">EU</option>
+        </select>
+      </label>
+      
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Región
+        </div>
+        <!-- El select está enlazado con la variable vm.language y cada vez cambie de valor, llamará a la función vm.changeLanguage() -->
+        <select ng-model="vm.region" ng-change="vm.changeRegion()">
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Africa">Africa</option>
+          <option value="Oceania">Oceania</option>
+          <option value="Americas">Americas</option>
+        </select>
+      </label>
+
+      <!-- Botón para eliminar datos. Al hacer click, llamará a la función vm.resetLocalStorage() -->
+      <button class="button button-full button-assertive" ng-click="vm.resetLocalStorage()">
+        {{'SETTINGS.RESET_DATA_BUTTON_LABEL' | translate}}
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

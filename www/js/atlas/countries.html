@@ -1,0 +1,35 @@
+<ion-view view-title="{{vm.title}}">
+  <!-- botón izquierdo del header -->
+  <ion-nav-buttons side="left">
+    <button class="button icon ion-navicon" ng-click="vm.showFilterPopover($event)"></button>
+  </ion-nav-buttons>
+  <!-- botón derecho del header -->
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-arrow-swap" ng-click="vm.showOrderPopover($event)"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <!-- buscador -->
+      <div class="bar item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="Buscar" ng-model="vm.searchTerm[vm.filterBy]">
+        </label>
+        <button class="button button-clear" ng-click="vm.resetSearch()">
+          Cancelar
+        </button>
+      </div>
+      <!-- lista de países de la región seleccionada -->
+      <!-- 1) forma de cambiar de estado; ng-click y $state.go en el controller -->
+      <ion-item ng-repeat="country in vm.countries | filter:vm.searchTerm | orderBy:vm.orderBy" ng-click="vm.gotoCapital(country.capital)">
+        <!-- 2) forma de cambiar de estado; ui-sref="estado({data})" -->
+        <!-- ion-item ng-repeat="country in vm.countries" ui-sref="tab.countries-capital({capital: country.capital})" -->
+        <!-- 3) forma de cambiar de estado; href="url/:data1/:data2/:dataX" -->
+        <!-- ion-item ng-repeat="country in vm.countries" href="#/tab/atlas/{{country.capital}}" -->
+        <h2>{{country.name}}</h2>
+        <p><b>Subregion:</b> {{country.subregion}}</p>
+        <p><b>Capital:</b> {{country.capital}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

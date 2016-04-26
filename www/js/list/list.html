@@ -1,0 +1,40 @@
+<ion-view view-title="{{'LIST.TITLE' | translate}}">
+    <ion-content>
+
+        <div class="bar item-input-inset">
+          <label class="item-input-wrapper">
+             <i class="icon ion-ios-search placeholder-icon"></i>
+             <input type="search" placeholder="Buscar" ng-model="vm.searchTerm">
+          </label>
+          <button class="button button-clear" ng-click="vm.resetSearch()">
+            Cancelar
+          </button>
+        </div>
+
+      <!-- Botón para añadir una nueva tarea. Al pulsar sobre él, llamará a la función vm.addTask() -->
+      <button ng-click="vm.addTask()" class="button button-full button-balanced">{{'LIST.ADD_TASK_BUTTON_LABEL' | translate}}</button>
+      <p class="no-result" ng-if="filtered.length === 0">No hay tareas para mostrar</p>
+      <!-- Lista de tareas -->
+      <ion-list show-delete="vm.showDelete">
+        <!-- Por cada tarea que haya en vm.task, creará un ion-item con el nombre de la tarea -->
+        <ion-item ng-repeat="task in filtered = (vm.tasks | filter:vm.searchTerm) track by $index">
+          {{task}}
+          <ion-option-button class="button-positive" ng-click="vm.editTask(task)">
+            Editar
+          </ion-option-button>
+
+          <ion-option-button class="button-royal" ng-click="vm.share(task)">
+            Compartir
+          </ion-option-button>
+
+          <ion-delete-button class="ion-minus-circled" ng-click="vm.removeTask(task)">
+          </ion-delete-button>
+
+        </ion-item>
+
+      </ion-list>
+      <button class="button button-full" ng-click="vm.toggleShowRemove()">
+        Editar lista
+      </button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+{
+  "SETTINGS": {
+    "TITLE": "Ezarpenak",
+    "TEXT": "Ezarpenak atalean gaude",
+    "ACTIVATED": "Ezarpenak aktibatua!",
+    "RESET_DATA": "Datuak ezabatu",
+    "RESET_SURE": "Ziur zaude?",
+    "CANCEL": "Utzi",
+    "YES": "Bai",
+    "NO_DELETED": "Datuak ez dira ezabatu.",
+    "LANGUAGE": "Hizkuntza",
+    "RESET_DATA_BUTTON_LABEL": "Datuak ezabatu"
+  },
+  "LIST": {
+    "TITLE": "Zerrenda",
+    "TEXT": "Zerrenda atalean gaude",
+    "ADD_TASK_BUTTON_LABEL": "Ataza gehitu",
+    "ADD_TASK": "Idatzi ataza bat",
+    "TASK_PLACEHOLDER": "Esnea erosi",
+    "TASK_CONSOLE": "Zure ataza: "
+  },
+  "TABS": {
+    "LIST": "Zerrenda",
+    "SETTINGS": "Ezarpenak"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "SETTINGS": {
+    "TITLE": "Configuración",
+    "TEXT": "Estamos en la pestaña Configuración",
+    "ACTIVATED": "¡Configuración activada!",
+    "RESET_DATA": "Resetear datos",
+    "RESET_SURE": "¿Estás seguro?",
+    "CANCEL": "Cancelar",
+    "YES": "Sí",
+    "NO_DELETED": "No se han borrado los datos.",
+    "LANGUAGE": "Idioma",
+    "RESET_DATA_BUTTON_LABEL": "Eliminar datos"
+  },
+  "LIST": {
+    "TITLE": "Lista",
+    "TEXT": "Estamos en la pestaña Lista",
+    "ACTIVATED": "¡Lista Activada!",
+    "ADD_TASK_BUTTON_LABEL": "Añadir tarea",
+    "ADD_TASK": "Escribe una tarea",
+    "TASK_PLACEHOLDER": "Comprar leche",
+    "TASK_CONSOLE": "Tu tarea es"
+  },
+  "TABS": {
+    "ATLAS": "Atlas",
+    "LIST": "Lista",
+    "SETTINGS": "Configuración"
+  }
+}
